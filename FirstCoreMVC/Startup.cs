@@ -45,6 +45,13 @@ namespace FirstCoreMVC
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseMvc(routes=> {
+                routes.MapRoute(
+                    name:"Search",
+                    template: "{controller=Search}/{action=Index}"
+                );
+            });
         }
     }
 }
